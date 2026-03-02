@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+        }
+        
+        .navbar {
+            background-color: #111;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        th {
+            background: #1e3c72;
+            color: white;
+        }
+        
+        .back-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 10px;
+            text-align: center;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h2>Smart QA Assistant - Dashboard</h2>
+    </div>
+
+    <div class="container">
+
+        <!-- Test Cases -->
+        <div class="card">
+            <h2>Test Cases</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Test Case</th>
+                </tr>
+
+                {% for test in tests %}
+                <tr>
+                    <td>{{ test[1] }}</td>
+                    <td>{{ test[2] }}</td>
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+
+        <!-- Bugs -->
+        <div class="card">
+            <h2>Bugs</h2>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+
+                {% for bug in bugs %}
+                <tr>
+                    <td>{{ bug[1] }}</td>
+                    <td>{{ bug[3] }}</td>
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+
+    </div>
+
+    <a href="/" class="back-btn">⬅ Back to Home</a>
+
+    <div class="footer">
+        © 2026 Smart QA Assistant | Developed by Pranay 🚀
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart QA Assistant</title>
+</head>
+
+<body>
+    <h2>Generate Test Case</h2>
+    <form action="/generate" method="POST">
+        Feature Name: <input type="text" name="feature">
+        <button type="submit">Generate</button>
+    </form>
+
+    <h2>Add Bug</h2>
+    <form action="/add_bug" method="POST">
+        Title: <input type="text" name="title"><br> Description: <input type="text" name="description"><br>
+        <button type="submit">Submit Bug</button>
+    </form>
+
+    <br>
+    <a href="/dashboard">Go to Dashboard</a>
+</body> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart QA Assistant</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+
+    <body>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <h2>Smart QA Assistant</h2>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+            </div>
+        </div>
+
+        <!-- Forms Section -->
+        <div class="container">
+
+            <!-- Generate Test Case -->
+            <div class="card">
+                <h2>Generate Test Case</h2>
+                <form action="/generate" method="POST">
+                    Feature Name:
+                    <input type="text" name="feature" placeholder="Enter feature name" required>
+                    <button type="submit">Generate</button>
+                </form>
+            </div>
+
+            <!-- Add Bug -->
+            <div class="card">
+                <h2>Add Bug</h2>
+                <form action="/add_bug" method="POST">
+                    Title:
+                    <input type="text" name="title" placeholder="Enter bug title" required> Description:
+                    <input type="text" name="description" placeholder="Enter bug description" required>
+
+                    <button type="submit">Submit Bug</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2026 Smart QA Assistant | Developed by Pranay 🚀
+        </div>
+
+    </body>
+
+</html>
+
+</html>
